@@ -1,0 +1,358 @@
+@mixin grayLink {
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  line-height: 16px;
+  color: $grey;
+  background-color: transparent;
+  transition: color $easing, background-color $easing;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &:focus {
+    color: $primary_shade;
+    background-color: $pink_violet;
+  }
+
+  &:active {
+    color: $primary_shade;
+    background-color: transparent;
+  }
+}
+
+@mixin heroHeading {
+  width: 560px;
+  margin-bottom: 49px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 65px;
+  color: $grey;
+}
+
+@mixin mainButton {
+  padding: 20px 48px;
+  background-color: $primary;
+  border: 2px solid $primary;
+  border-radius: 10px;
+  color: $white;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  cursor: pointer;
+  outline: none;
+  transition: background-color $easing, border-color $easing;
+
+  &:hover {
+    background-color: $primary_light;
+    border-color: $primary_light;
+  }
+
+  &:focus {
+    background-color: $primary_light;
+    border-color: $primary_shade;
+  }
+
+  &:active {
+    background-color: $primary_shade;
+    border-color: $primary_shade;
+  }
+}
+
+@mixin buyButton {
+  padding: 17px 33px;
+  background-color: transparent;
+  border: 2px solid $primary;
+  border-radius: 10px;
+  color: $primary;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  cursor: pointer;
+  outline: none;
+  transition: background-color $easing, border-color $easing, color $easing;
+
+  &:hover {
+    color: $white;
+    background-color: $primary;
+  }
+
+  &:focus {
+    color: $white;
+    background-color: $primary_light;
+  }
+
+  &:active {
+    color: $white;
+    background-color: $primary_shade;
+    border-color: $primary_shade;
+  }
+}
+
+// переменные для шрифтов заголовков
+$heading-font-sizes: (
+  null: 32px,
+  721px: 24px,
+);
+
+// миксин для изменения шрифтов на брекпойнтах
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    }
+    @else {
+      @media (max-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
+@mixin sectionHeading {
+  margin-bottom: 26px;
+  @include font-size($heading-font-sizes);
+  line-height: 100%;
+  font-weight: 400;
+  color: $black;
+}
+
+@mixin cardHeading {
+  height: 62px;
+  max-width: 225px;
+  font-size: 24px;
+  line-height: 1.3em;
+  font-weight: 400;
+  color: $black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin headingLink {
+  color: $black;
+
+  &:focus {
+    outline: 1px dotted $grey;
+    outline-offset: -2px;
+  }
+}
+
+@mixin prevBtn {
+  width: 32px;
+  height: 32px;
+  border: 2px solid $primary;
+  border-radius: 100%;
+  transition: border-color $easing, background-color $easing;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary;
+
+    &::after {
+      border-color: $white;
+    }
+  }
+
+  &:focus {
+    background-color: $primary_light;
+
+    &::after {
+      border-color: $white;
+    }
+  }
+
+  &:active {
+    background-color: $primary_shade;
+    border-color: $primary_shade;
+
+    &::after {
+      border-color: $white;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 9px;
+    right: 8px;
+    content: "";
+    width: 8px;
+    height: 8px;
+    transform: rotate(-45deg);
+    border-top: 2px solid $primary;
+    border-left: 2px solid $primary;
+    transition: border-color $easing;
+  }
+}
+
+@mixin nextBtn {
+  width: 32px;
+  height: 32px;
+  border: 2px solid $primary;
+  border-radius: 100%;
+  transition: border-color $easing, background-color $easing;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary;
+
+    &::after {
+      border-color: $white;
+    }
+  }
+
+  &:focus {
+    background-color: $primary_light;
+
+    &::after {
+      border-color: $white;
+    }
+  }
+
+  &:active {
+    background-color: $primary_shade;
+    border-color: $primary_shade;
+
+    &::after {
+      border-color: $white;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 9px;
+    right: 11px;
+    content: "";
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    border-top: 2px solid $primary;
+    border-right: 2px solid $primary;
+    transition: border-color $easing;
+  }
+}
+
+@mixin disabledBtn {
+  cursor: auto;
+  border-color: $grey;
+  background-color: transparent;
+
+  &::after {
+    border-color: $grey;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $grey;
+    background-color: transparent;
+
+    &::after {
+      border-color: $grey;
+    }
+  }
+}
+
+@mixin linkArrow {
+  position: relative;
+  font-size: 16px;
+  line-height: 120%;
+  font-weight: 700;
+  color: $primary;
+  border-bottom: 2px solid transparent;
+  transition: color $easing, border-color $easing;
+
+  &::before {
+    position: absolute;
+    right: -27px;
+    content: "";
+    width: 18px;
+    height: 18px;
+    border: 2px solid $primary;
+    border-radius: 100%;
+    background-color: transparent;
+    transition: background-color $easing, border-color $easing;
+  }
+
+  &::after {
+    position: absolute;
+    top: 8px;
+    right: -18px;
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid $primary;
+    border-right: 2px solid $primary;
+    transform: rotate(45deg);
+    transition: border-color $easing;
+  }
+
+  &:hover {
+    border-bottom-color: $primary;
+
+    &::before {
+      background-color: $primary;
+    }
+
+    &::after {
+      border-color: $white;
+    }
+  }
+
+  &:focus {
+    border-bottom-color: $primary;
+
+    &::before {
+      background-color: $primary_light;
+    }
+
+    &::after {
+      border-color: $white;
+    }
+  }
+
+  &:active {
+    border-bottom-color: $primary_shade;
+    color: $primary_shade;
+
+    &::before {
+      background-color: $primary_shade;
+      border-color: $primary_shade;
+    }
+
+    &::after {
+      border-color: $white;
+    }
+  }
+}
+
+@mixin filterHeading {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+@mixin modal {
+  max-width: unset;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 10px;
+  background-color: $white;
+  overflow: hidden;
+
+  a.close-modal {
+    width: 20px;
+    height: 20px;
+    right: 20px;
+    top: 20px;
+    background-image: url(./img/sprite.svg#modal-close);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 20;
+  }
+}

@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/open-sans-v23-latin_cyrillic-regular.woff2) format('woff2'),
+    url(../fonts/open-sans-v23-latin_cyrillic-regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../fonts/open-sans-v23-latin_cyrillic-600.woff2) format('woff2'),
+    url(../fonts/open-sans-v23-latin_cyrillic-600.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/open-sans-v23-latin_cyrillic-700.woff2) format('woff2'),
+    url(../fonts/open-sans-v23-latin_cyrillic-700.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(../fonts/playfair-display-v22-cyrillic-900.woff2) format('woff2'),
+    url(../fonts/playfair-display-v22-cyrillic-900.woff) format('woff');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'OpenSans';
+  font-size: 16px;
+  line-height: 22px;
+  color: $black;
+  background-color: $white;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+  outline: none;
+}
+
+.btn {
+  border: none;
+  padding: 0;
+  outline: none;
+}
+
+.inpt {
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+
+.paragraph,
+.heading1,
+.heading2,
+.heading3,
+.heading4 {
+  margin: 0;
+}
+
+.field {
+  margin: 0;
+  padding: 0;
+  border: none;
+}

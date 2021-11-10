@@ -1,0 +1,98 @@
+@import '_variables.scss';
+
+.collection {
+  height: 600px;
+  margin-bottom: 70px;
+  background-image: url(../img/collection/collection-1920.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__container {
+    max-width: $containerMaxWidth;
+    margin: 0 auto;
+    padding: 160px 0 0;
+  }
+
+  &__heading {
+    margin-bottom: 6px;
+    font-family: 'PlayfairDisplay';
+    font-size: 60px;
+    line-height: 100%;
+    font-weight: 900;
+    color: $gold;
+  }
+
+  &__description {
+    width: 508px;
+    margin-bottom: 50px;
+    font-size: 48px;
+    line-height: 120%;
+    font-weight: 400;
+    color: $white;
+  }
+
+  &__button {
+    display: inline-block;
+    @include mainButton;
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 1352px) {
+  .collection {
+
+    &__container {
+      margin: 0 $contanerMargin1024;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .collection {
+    background-image: url(../img/collection/collection-1024.jpg);
+  }
+}
+
+@media (max-width: 768px) {
+  .collection {
+    background-image: url(../img/collection/collection-768.jpg);
+  }
+}
+
+@media (max-width: 721px) {
+  .collection {
+    height: 210px;
+    margin-bottom: 162px;
+
+    &__container {
+      position: relative;
+      height: 372px;
+      margin: 0 $contanerMargin320;
+      padding-top: 34px;
+    }
+
+    &__heading {
+      font-size: 24px;
+      margin-bottom: 3px;
+    }
+
+    &__description {
+      width: 187px;
+      font-size: 16px;
+    }
+
+    &__button {
+      text-align: center;
+      position: absolute;
+      bottom: 70px;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .collection {
+    background-image: url(../img/collection/collection-320.jpg);
+  }
+}
