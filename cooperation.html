@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SitDownPls — интернет-магазин мебели. Сотрудничество</title>
+
+  <link rel="stylesheet" href="choices.min.css" />
+  <link rel="stylesheet" href="main.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <script defer src="jquery.min.js"></script>
+  <script defer src="choices.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="header header_card">
+    <div class="header__background"></div>
+    <div class="header__background2"></div>
+    <div class="header__container header__container_catalog">
+      <div class="header__first">
+        <div class="header__city">
+          <p class="paragraph city__text">Ваш регион:</p>
+          <select name="city-selector" class="city__selector">
+            <option value="Москва" class="city__option">Москва</option>
+            <option value="Казань" class="city__option">Казань</option>
+            <option value="Уфа" class="city__option">Уфа</option>
+            <option value="Пермь" class="city__option">Пермь</option>
+          </select>
+        </div>
+        <a href="tel:+74958854547" class="header__phone phone link">
+          <svg class="phone__img" height="17" width="23">
+            <use xlink:href="./img/sprite.svg#phone"></use>
+          </svg>
+          +7 (495) 885-45-47
+        </a>
+      </div>
+      <nav class="header__nav nav">
+        <ul class="nav__list list">
+          <li class="nav__item">
+            <a href="#" class="nav__link link">О компании</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link link">Гарантия и возврат</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link link">Корпоративным клиентам</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link link">Дизайн-решение</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="btn header__burger">
+        <svg class="burger__img" width="24" height="24">
+          <use xlink:href="./img/sprite.svg#burger"></use>
+        </svg>
+      </button>
+      <a href="index.html" class="link header__home home">
+        <svg class="home__img">
+          <use xlink:href="./img/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <nav class="header__menu menu">
+        <button class="btn menu__close">
+          <svg class="close__img" width="24" height="24">
+            <use xlink:href="./img/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <ul class="menu__list list">
+          <li class="menu__item">
+            <a href="catalog.html" class="link menu__link">Каталог</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="link menu__link">Магазины</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="link menu__link">Шоу-рум</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="link menu__link">Доставка и оплата</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="link menu__link">Дисконт</a>
+          </li>
+          <li class="menu__item">
+            <a href="contacts.html" class="link menu__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="header__form header__form_catalog search">
+        <input type="text" name="search" placeholder="Я хочу купить..." class="inpt search__input">
+        <button disabled type="submit" class="btn search__button search__button_disabled"></button>
+        <select name="furniture" class="search__selector">
+          <option value="Все" class="search__option" selected>Категория</option>
+          <option value="Диваны" class="search__option">Диваны</option>
+          <option value="Кресла" class="search__option">Кресла</option>
+          <option value="Пуфы" class="search__option">Пуфы</option>
+          <option value="Кровати" class="search__option">Кровати</option>
+          <option value="Тумбы" class="search__option">Тумбы</option>
+          <option value="Комоды" class="search__option">Комоды</option>
+          <option value="Стулья" class="search__option">Стулья</option>
+          <option value="Столы" class="search__option">Столы</option>
+          <option value="Аксессуары" class="search__option">Аксессуары</option>
+        </select>
+      </form>
+      <div class="header__client header__client_catalog">
+        <button class="btn client__user user">
+          <svg class="user__img">
+            <use xlink:href="./img/sprite.svg#user"></use>
+          </svg>
+        </button>
+        <button class="btn client__cart cart">
+          <span class="cart__quantity">0</span>
+          <svg class="cart__img">
+            <use xlink:href="./img/sprite.svg#cart"></use>
+          </svg>
+        </button>
+      </div>
+      <ul class="header__breadcrumb breadcrumb list">
+        <li class="breadcrumb__item">
+          <a href="index.html" class="breadcrumb__link link">
+            Главная
+          </a>
+        </li>
+        <li class="breadcrumb__item">
+          <a class="breadcrumb__link breadcrumb__link_current link">
+            Сотрудничество
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="cooperation">
+      <div class="cooperation__container">
+        <h1>
+          Сотрудничество
+        </h1>
+        <section>
+          <h2>
+            Поставщикам
+          </h2>
+          <p>
+            При планировании обстановки торгового помещения важно обустроить его с комфортом для покупателей: грамотно зонировать, обеспечить эффективную демонстрацию и хранение товаров в зале. Если вам необходимо комплексное оснащение, организация зоны отдыха или отдельные предметы меблировки для поддержания эффективной торговой деятельности, мы поможем выбрать продукцию с&nbsp;учетом нагрузки от поступающего трафика.
+          </p>
+        </section>
+        <section>
+          <h2>
+            Что вы получаете?
+          </h2>
+          <ul>
+            <li>
+              <p>
+                Мы ценим идеи и вдохновение и&nbsp;предлагаем сотрудничество талантливым дизайнерам и архитекторам. Выпускаемая нами продукция гармонично дополнит любой современный проект.
+              </p>
+            </li>
+            <li>
+              <p>
+                Комплексное решение для красивого и функционального обустройства любых пространств.
+              </p>
+            </li>
+            <li>
+              <p>
+                В ассортименте представлены все товарные группы для того, чтобы воссоздать обстановку в&nbsp;помещениях разных типов: кабинетах, смешанных пространствах, Open Space, гостевых и переговорных комнатах.
+              </p>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>
+            Ваши преимущества от сотрудничества
+          </h2>
+          <div>
+            <h3>
+              Возможность 1:
+            </h3>
+            <p>
+              Создавайте незабываемые впечатления. Красиво меблированная фотостудия не оставит клиентов равнодушными, а созданная интерьером атмосфера будет надолго запечатлена на их снимках. Стильная и разноплановая обстановка творческого пространства – ключевая составляющая его успешной деятельности. Позаботьтесь о людях в кадре, а мы поможем правильно выбрать мебель.
+            </p>
+          </div>
+          <div>
+            <h3>
+              Возможность 2:
+            </h3>
+            <p>
+              Мы предлагаем застройщикам, работающим на территории РФ, участие наших специалистов от этапа проектирования обстановки квартир и подбора комплексных интерьерных решений до оптовых поставок мебели. Поможем организовать демонстрационный зал с образцами изделий и материалов на площади нового здания, чтобы покупатель заблаговременно подобрал тот вариант меблировки, который удовлетворит даже самые взыскательные ожидания.
+            </p>
+          </div>
+        </section>
+        <section>
+          <h2>
+            Гарантии
+          </h2>
+          <ol>
+            <li>
+              <p>
+                При приемке товара Покупатель должен внимательно проверить его количество, качество и ассортимент на соответствие сопроводительным документам и заказу. После подписания товарного чека Покупатель утрачивает право предъявления претензий, которые можно выявить при приемке товара.
+              </p>
+            </li>
+            <li>
+              <p>
+                На товары, сборка которых производилась покупателем самостоятельно (не специалистами Продавца), гарантийные обязательства Продавца не распространяются. Также гарантия не распространяется на повреждения товара, полученные в ходе самостоятельной доставки и подъема товара. Покупатель не вправе отказаться от товара надлежащего качества, имеющего индивидуально&#8209;определенные свойства, т.е. если товар может быть использован исключительно приобретающим его потребителем.
+              </p>
+            </li>
+            <li>
+              <p>
+                Возврат или обмен товара возможен при условии, что сохранена упаковка, товарный вид и потребительские свойства товара, а также товарный и кассовый чеки. В этом случае мы гарантируем вам возврат полной стоимости товара (за вычетом стоимости доставки). В случае отказа от товара при доставке, клиент оплачивает услуги доставки.
+              </p>
+            </li>
+          </ol>
+          <p>
+            <strong>
+              Срок гарантии на нашу мебель составляет от&nbsp;18 до 60 месяцев
+            </strong>
+          </p>
+        </section>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__container">
+          <div class="footer__left">
+            <a href="index.html" aria-label="Домой" class="footer__home link">
+              <svg class="footer__img">
+                <use xlink:href="./img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <ul class="footer__socials list socials">
+              <li class="socials__item">
+                <a href="#" aria-label="Наша страничка в фэйсбук" class="socials__link link">
+                  <svg class="socials__img">
+                    <use xlink:href="./img/sprite.svg#fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#" aria-label="Наша страничка в контакте" class="socials__link link">
+                  <svg class="socials__img">
+                    <use xlink:href="./img/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="#" aria-label="Наша страничка в инстаграм" class="socials__link link">
+                  <svg class="socials__img">
+                    <use xlink:href="./img/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <nav class="footer__right navigation">
+            <ul class="navigation__list list">
+              <li class="navigation__item chapter about">
+                <h3 class="chapter__heading heading3">
+                  О нас
+                </h3>
+                <ul class="chapter__list list">
+                  <li class="chapter__item">
+                    <a href="#" class="chapter__link link">
+                      О компании
+                    </a>
+                  </li>
+                  <li class="chapter__item">
+                    <a href="#" class="chapter__link link">
+                      Блог
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="navigation__item chapter services">
+                <h3 class="chapter__heading heading3">
+                  Услуги
+                </h3>
+                <ul class="chapter__list list">
+                  <li class="chapter__item">
+                    <a href="#" class="chapter__link link">
+                      Доставка
+                    </a>
+                  </li>
+                  <li class="chapter__item">
+                    <a href="#" class="chapter__link link">
+                      Рассрочка и кредит
+                    </a>
+                  </li>
+                  <li class="chapter__item">
+                    <a href="#" class="chapter__link link">
+                      Сборка и установка
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="navigation__item chapter connect">
+                <h3 class="chapter__heading heading3">
+                  Связь с нами
+                </h3>
+                <ul class="chapter__list list">
+                  <li class="chapter__item">
+                    <a href="#" class="chapter__link link">
+                      Обратная связь
+                    </a>
+                  </li>
+                  <li class="chapter__item">
+                    <a href="#" class="chapter__link link">
+                      Контакты
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="navigation__item chapter collaboration">
+                <h3 class="chapter__heading heading3">
+                  Сотрудничество
+                </h3>
+                <ul class="chapter__list list">
+                  <li class="chapter__item">
+                    <a href="cooperation.html" class="chapter__link link">
+                      Поставщикам
+                    </a>
+                  </li>
+                  <li class="chapter__item">
+                    <a href="#" class="chapter__link link">
+                      Оптовикам
+                    </a>
+                  </li>
+                  <li class="chapter__item">
+                    <a href="#" class="chapter__link link">
+                      Карьера
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright paragraph copyright">
+          SDP&reg;<span class="copyright__span">2011-2021</span>
+        </p>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
